@@ -1002,7 +1002,6 @@ object Radar {
      * @param[beacons] A boolean indicating whether to range beacons.
      * @param[callback] An optional callback.
      */
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     @JvmStatic
     fun trackVerified(beacons: Boolean = false, callback: RadarTrackVerifiedCallback? = null) {
         if (!initialized) {
@@ -1029,7 +1028,6 @@ object Radar {
      * @param[beacons] A boolean indicating whether to range beacons.
      * @param[block] A block callback.
      */
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     @JvmStatic
     fun trackVerified(beacons: Boolean = false, block: (status: RadarStatus, token: RadarVerifiedLocationToken?) -> Unit) {
         trackVerified(beacons, object : RadarTrackVerifiedCallback {
